@@ -8,6 +8,16 @@
 
 <body>
 
+    <script>
+
+const isLoggedIn = localStorage.getItem("loggedIn");
+
+if(!isLoggedIn){
+  window.location.href = "login.html";
+}
+
+</script>
+
 <nav class="navbar">
 
 <div class="logo-area">
