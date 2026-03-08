@@ -61,3 +61,28 @@ container.appendChild(card)
 }
 
 
+//Modal system 
+const modal = document.getElementById("issueModal")
+
+function openModal(issue){
+
+modal.classList.remove("hidden")
+
+document.getElementById("modalTitle").innerText = issue.title
+document.getElementById("modalDesc").innerText = issue.description
+
+document.getElementById("modalInfo").innerHTML = `
+
+<p>Status: ${issue.status}</p>
+<p>Author: ${issue.author}</p>
+<p>Priority: ${issue.priority}</p>
+<p>Label: ${issue.label}</p>
+<p>Created: ${issue.createdAt}</p>
+
+`
+
+}
+
+document.getElementById("closeModal").onclick = ()=>{
+modal.classList.add("hidden")
+}
