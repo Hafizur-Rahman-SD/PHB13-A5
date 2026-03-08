@@ -16,6 +16,8 @@ if(username === adminUser && password === adminPass){
 
 alert("Login Successful!")
 
+localStorage.setItem("loggedIn","true")
+
 window.location.href = "index.html"
 
 }
@@ -26,5 +28,3 @@ errorMsg.textContent = "Invalid username or password"
 }
 
 })
-
-
